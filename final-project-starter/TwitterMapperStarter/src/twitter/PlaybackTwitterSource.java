@@ -3,6 +3,10 @@ package twitter;
 import twitter4j.Status;
 import util.ObjectSource;
 
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 /**
  * A Twitter source that plays back a recorded stream of tweets.
  *
@@ -15,7 +19,9 @@ public class PlaybackTwitterSource extends TwitterSource {
     // The speedup to apply to the recorded stream of tweets; 2 means play at twice the rate
     // at which the tweets were recorded
     private final double speedup;
-    private ObjectSource source = new ObjectSource("data/TwitterCapture.jobj");
+
+    String filePath = new File("").getAbsolutePath();
+    private ObjectSource source = new ObjectSource(filePath + "/TwitterMapperStarter/data");
     private boolean threadStarted = false;
 
     public PlaybackTwitterSource(double speedup) {

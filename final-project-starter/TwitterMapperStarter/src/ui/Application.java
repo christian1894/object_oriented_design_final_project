@@ -15,6 +15,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.util.*;
 import java.util.List;
 import java.util.Timer;
@@ -36,7 +37,6 @@ public class Application extends JFrame {
     private void initialize() {
         // To use the live twitter stream, use the following line
         // twitterSource = new LiveTwitterSource();
-
         // To use the recorded twitter stream, use the following line
         // The number passed to the constructor is a speedup value:
         //  1.0 - play back at the recorded speed
